@@ -30,10 +30,12 @@
   h1{
     text-decoration: underline;
     font-size: 3em;
+    text-shadow: 2px 2px #b7b4c5;
   }
    h2{
     margin: 0;
     padding:0;
+    
     text-shadow: 2px 2px #b7b4c5;
     font-size: 2em;
    }
@@ -68,7 +70,7 @@ footer:nth-child(2):hover img{
     background: #feffff;
     border-radius:100%; 
     animation-name: spin;
-    animation-duration: 0.46s;
+    animation-duration: 0.5s;
     animation-iteration-count: infinite;
   
 }
