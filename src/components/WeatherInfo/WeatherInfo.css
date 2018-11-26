@@ -1,0 +1,58 @@
+.weather-info{
+    width: 100%;
+    margin:5%;
+    font-family: "Playfair Display","Courier";
+
+}
+
+.weather-summary{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   
+   
+}
+.weather-summary p{
+    padding: 2% 10%;
+    width: 100%;
+    font-size: calc(10px + 4vmin);
+    font-weight: bolder;
+    box-shadow: 0.5vh 0.5vh 2vh 0.5vh black;
+    background:  #413c59;
+    color:#ffffff;
+}
+.weather-details{
+    line-height: 2;
+}
+
+.temperature,
+.pressure,
+.humidity,
+.wind{
+    width:90%;
+    background:  #413c59;
+    color:#ffffff;
+    box-shadow: 0.5vh 0.5vh 2vh 0.5vh black; 
+    margin: 5% 5%;
+}
+
+.temperature-value,
+.pressure-value,
+.wind-value,
+.humidity-value{
+    color:#413c59;
+    background:#ffffff;
+}
+.weather-icon{
+    margin-top:5%;
+    animation: walk 4s infinite;
+    
+    border-radius:100%; 
+    box-shadow: 0.5vh 0.5vh 2vh 0vh black; 
+}
+@keyframes walk{
+    0%{ left:0%;transform:rotate(20deg)}
+    50%{ left:5%;transform:rotate(-20deg)}
+    100%{ left:0%;transform:rotate(20deg)}
+    
+}
