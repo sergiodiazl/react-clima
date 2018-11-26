@@ -10,17 +10,27 @@ class WeatherContainer extends Component {
         this.state={
             language:SPANISH,
             weatherData:{},
+            weatherBoxStyle:"weather-box-waiting",
         };
         this.changeLanguage=this.changeLanguage.bind(this);    
         this.searchWeather=this.searchWeather.bind(this);
+        this.changeStyleBasedOnResults=this.changeStyleBasedOnResults.bind(this);
+      
     }
-    searchWeather(city){
+    componentDidUpdate(){
+       
+        const {cod}=this.state.weatherData;
+        console.log(cod);
+        this.changeStyleBasedOnResults(cod);
+        return true;
+    }
+    async searchWeather(city){
         fetch(APIURL+city)
         .then(response=>response.json())
         .then(data=> this.setState({weatherData:data}))
-        .then(data=>console.log(data))
         .catch((error)=>console.log(error));
-      
+        
+
     }
     
     changeLanguage(){
@@ -30,13 +40,25 @@ class WeatherContainer extends Component {
             this.setState({language:SPANISH})
         }
     }
+    changeStyleBasedOnResults(cod){
+        var style;
+        if(cod===200){
+            style='weather-box-success';
+        }else{
+            style='weather-box-waiting';
+        }
+        if (style !==this.state.weatherBoxStyle){
+            this.setState({weatherBoxStyle:style});
+        }
+      
+    }
     render() {
         const {title,author,github}=this.state.language;  
       return (
         <div className="weather-container">
-            <div className="weather-box">
+            <div className={this.state.weatherBoxStyle} >
                 <h1>{title}</h1>
-                <WeatherInfo class="weather-info" weatherData={this.state.weatherData} language={this.state.language}/>
+                <WeatherInfo className="weather-info" changeParentStyle={this.changeStyleBasedOnResults}weatherData={this.state.weatherData} language={this.state.language}/>
                 <WeatherForm searchWeather={this.searchWeather}  changeLanguage={this.changeLanguage}language={this.state.language}/>
                
             </div>

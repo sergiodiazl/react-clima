@@ -6,12 +6,13 @@
   justify-content: space-between;
   min-height: 100vh;
   max-width: 100%;
-  padding-top: 3%;
+ 
   font-family: 'Lobster','Courier';
   color: #413c59;
   }
   
-  .weather-box{
+  .weather-box-waiting,
+  .weather-box-success{
     background: #feffff;
     display: flex;
     padding: 3%;
@@ -19,10 +20,12 @@
     flex-direction: column;
     align-items: center;   
     justify-content: center;
-    margin : auto;
+    margin : auto  3%;
     border-radius: 1%;
     box-shadow: 1vh 1vh 3vh 0.5vh;
-
+  }
+  .weather-box-success{
+    margin:3%;
   }
   h1{
     text-decoration: underline;
