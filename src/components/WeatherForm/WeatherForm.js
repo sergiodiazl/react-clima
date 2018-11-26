@@ -22,14 +22,15 @@ class WeatherForm extends Component {
             <form className="weather-form" onSubmit={this.handleSubmit}>
                 <fieldset>
                      <legend>{formLegend}</legend>
-                    
+                        <div className="weather-input">
                         <input type="text"name="city" ref={(input)=>this.cityInput=input}
                         placeholder={cityPlaceholder}
                          required></input>      
-                     
+                        
                         <button className='submit-bottom'type="submit">
                         {buttonText}
-                        </button>   
+                        </button> 
+                        </div>   
                 </fieldset>
                
                 <button className='language-button'onClick={this.props.changeLanguage}>{otherLanguage}</button>

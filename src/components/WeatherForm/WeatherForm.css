@@ -12,22 +12,24 @@ form{
 }
 fieldset{
     border:none;
-    display: flex;
     margin:0 2% 0 0%;
-    
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-size: 2em;
 }
 form button{
-    justify-self: flex-end;
     width: 25%;
     border-style:none;
-    border-radius:3%;
+    padding: 2%;
+    border-radius: 3%; 
     border-color:#feffff;
     background-color:#a0d8ef;
     color: #413c59;
     text-shadow: 2px 2px #b7b4c5;
-    font-size: 1.7vmin; 
+    font-size: 1em; 
     font-family: 'Lobster','Courier'; 
-   
+    
     transition: background-color 1.5s ease;
     
     box-shadow: 0.5vh 0.5vh 1vh 0vh rgb(0, 0, 0.5);
@@ -36,6 +38,13 @@ form button:hover{
    background-color: #feffff;
 }
 
+.weather-input{
+    display:flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+  
+}
 input{
     width: 75%;
     display:block;
@@ -44,14 +53,15 @@ input{
     justify-self: flex-start;
     font-family: "Playfair Display","Courier";  
     font-size: 2.1vmin;  
-    text-shadow: 2px 2px#b7b4c5;
+    text-shadow: 0.1em 0.1em #b7b4c5;
+    font-size: 0.8em;
 }
 input:required{
     box-shadow: none;
    
 }
 .language-button{
-    padding: 2%;
-    border-radius: 3%; 
+    width:50%;
+    font-size: 2em; 
   }
   

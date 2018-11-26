@@ -5,6 +5,8 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+  max-width: 100%;
+
   font-family: 'Lobster','Courier';
   color: #413c59;
   }
@@ -14,21 +16,23 @@
     display: flex;
     padding: 3%;
     align-self: center;
-    max-height: 80%;
+    margin: auto 5% ;
     flex-direction: column;
     align-items: center;   
-    margin:  auto 0 ;
+    justify-content: center;
     
     border-radius: 1%;
     box-shadow: 1vh 1vh 3vh 0.5vh;
   }
   h1{
     text-decoration: underline;
+    font-size: 3em;
   }
    h2{
     margin: 0;
     padding:0;
     text-shadow: 2px 2px #b7b4c5;
+    font-size: 2em;
    }
   
   footer {
@@ -40,9 +44,7 @@
 footer img{
   width: 25%;
   height: auto;
-   border-color: #282c34;
-
-    
+  border-color: #282c34;
 }
 footer a{
   justify-self: flex-end;
@@ -51,6 +53,7 @@ footer a{
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  color:#feffff;
 }
 footer a:visited{
   color:#feffff;
