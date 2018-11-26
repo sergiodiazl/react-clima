@@ -1,50 +1,57 @@
 .weather-form{
     background:#a0d8ef;
- 
+    min-width: 90%;
+    text-shadow: 2px 2px #b7b4c5;
     margin: 5%;
     padding: 3%;
     border-radius:1%;
-    font-size: calc(10px + 2vmin);
+    font-size:  2.3vmin;
 }
 form{  
-     
     box-shadow: 0.5vh 0.5vh 2vh 0.5vh;
 }
 fieldset{
-    width:90%;
     border:none;
     display: flex;
-    justify-content: space-evenly;   
+    margin:0 2% 0 0%;
+    
 }
 form button{
     justify-self: flex-end;
-    width: 20%;
+    width: 25%;
     border-style:none;
     border-radius:3%;
     border-color:#feffff;
     background-color:#a0d8ef;
     color: #413c59;
-    font-size: calc(5px + 2vmin); 
+    text-shadow: 2px 2px #b7b4c5;
+    font-size: 1.7vmin; 
     font-family: 'Lobster','Courier'; 
-    padding: 2%;
-    box-shadow: 0.5vh 0.5vh 2vh 0.5vh black;
+   
+    transition: background-color 1.5s ease;
+    
+    box-shadow: 0.5vh 0.5vh 1vh 0vh rgb(0, 0, 0.5);
 }
 form button:hover{
-    background-color:#feffff;
-    
+   background-color: #feffff;
 }
 
 input{
     width: 75%;
+    display:block;
+    margin-right:0.5%;
     padding:4%;
     justify-self: flex-start;
     font-family: "Playfair Display","Courier";  
-    font-size: calc(5px + 2vmin);  
-    
+    font-size: 2.1vmin;  
+    text-shadow: 2px 2px#b7b4c5;
+}
+input:required{
+    box-shadow: none;
+   
 }
 .language-button{
-    
-    min-width: 90%;
     padding: 2%;
     border-radius: 3%; 
   }
+  

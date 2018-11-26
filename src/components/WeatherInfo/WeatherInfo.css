@@ -2,7 +2,7 @@
     width: 100%;
     margin:5%;
     font-family: "Playfair Display","Courier";
-
+    
 }
 
 .weather-summary{
@@ -10,16 +10,18 @@
     align-items: center;
     flex-direction: column;
    
-   
 }
 .weather-summary p{
-    padding: 2% 10%;
+    margin-top: 0;
+    padding: 2% 8%;
     width: 100%;
     font-size: calc(10px + 4vmin);
     font-weight: bolder;
     box-shadow: 0.5vh 0.5vh 2vh 0.5vh black;
     background:  #413c59;
     color:#ffffff;
+    text-shadow:1px 2px #69647e;
+    
 }
 .weather-details{
     line-height: 2;
@@ -34,6 +36,7 @@
     color:#ffffff;
     box-shadow: 0.5vh 0.5vh 2vh 0.5vh black; 
     margin: 5% 5%;
+    text-shadow:1px 2px #69647e;
 }
 
 .temperature-value,
@@ -42,13 +45,19 @@
 .humidity-value{
     color:#413c59;
     background:#ffffff;
+    text-shadow: 2px 2px #b7b4c5;
 }
 .weather-icon{
-    margin-top:5%;
-    animation: walk 4s infinite;
-    
+    margin-top:3%;
+    margin-bottom: 3%;
+    animation: walk 2s infinite;
     border-radius:100%; 
-    box-shadow: 0.5vh 0.5vh 2vh 0vh black; 
+    box-shadow: 0.5vh 0.5vh 2vh 0vh #4d4b4b; 
+}
+.weather-icon img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 @keyframes walk{
     0%{ left:0%;transform:rotate(20deg)}
