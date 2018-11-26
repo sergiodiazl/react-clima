@@ -6,7 +6,7 @@
   justify-content: space-between;
   min-height: 100vh;
   max-width: 100%;
-
+  padding-top: 3%;
   font-family: 'Lobster','Courier';
   color: #413c59;
   }
@@ -16,13 +16,13 @@
     display: flex;
     padding: 3%;
     align-self: center;
-    margin: auto 5% ;
     flex-direction: column;
     align-items: center;   
     justify-content: center;
-    
+    margin : auto;
     border-radius: 1%;
     box-shadow: 1vh 1vh 3vh 0.5vh;
+
   }
   h1{
     text-decoration: underline;
@@ -36,6 +36,7 @@
    }
   
   footer {
+    margin-top: 3%;
     align-self: flex-end;
     background-color: #282c34;
     min-width: 100%;
@@ -43,6 +44,7 @@
    }
 footer img{
   width: 25%;
+ 
   height: auto;
   border-color: #282c34;
 }
