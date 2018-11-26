@@ -18,9 +18,7 @@ class WeatherContainer extends Component {
       
     }
     componentDidUpdate(){
-       
         const {cod}=this.state.weatherData;
-        console.log(cod);
         this.changeStyleBasedOnResults(cod);
         return true;
     }
